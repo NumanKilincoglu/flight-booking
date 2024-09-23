@@ -1,0 +1,211 @@
+.flight-record {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  border-bottom-left-radius: 0px;
+  padding: 1.5rem 1.5rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 185px;
+}
+
+.top-section {
+  display: flex;
+}
+
+.details-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-section .price-info {
+  font-size: 16px;
+  text-align: left;
+}
+
+.bottom-section .book-flight {
+  position: absolute;
+  padding: 1rem 1.5rem;
+  background-color: #4c0197;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.1s;
+  font-weight: bold;
+  height: 55px;
+  width: 180px;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 12px;
+  border-bottom-right-radius: 20px;
+  z-index: 3;
+}
+
+.bottom-section .book-flight:hover {
+  background-color: #7c1ade;
+}
+
+.check-details {
+  position: absolute;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  background-color: #e8e0ea;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  height: 40px;
+  width: auto;
+  bottom: -40px;
+  left: 0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  text-decoration: underline;
+  color: #4c0197;
+}
+
+.flight-icon {
+  width: 26px;
+}
+
+.airline-icon {
+  width: auto;
+  max-width: 120px;
+}
+
+.departure {
+  font-size: 16px;
+  font-weight: bold;
+  color: #808080;
+}
+
+.airline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.flight-record .flight-details-section {
+  padding: 0;
+}
+
+h5,
+h4 {
+  margin: 0;
+}
+
+h4 {
+  color: rgb(89, 89, 89);
+  font-size: 18px;
+}
+
+p {
+  margin: 0;
+}
+
+.bold-text {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bolder-text {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gray {
+  color: #808080;
+}
+
+.dark-gray {
+  color: rgb(89, 89, 89);
+}
+
+.price-tag {
+  font-size: 20px;
+  color: #5c02b6;
+  font-weight: 900;
+  text-align: left;
+}
+
+.line-wrap {
+  width: 15%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.line {
+  background-color: #7c1ade;
+  border-radius: 0.5rem;
+  display: block;
+  height: 0.2rem;
+  line-height: 0;
+  margin: 0.25rem auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 150px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  color: #4c0197;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+@media screen and (max-width: 976px) {
+  .flight-record {
+    padding-bottom: 3rem;
+  }
+
+  .bottom-section .book-flight {
+    padding: 0.8rem 2rem;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+  }
+
+  .flight-record .details-section {
+    flex-wrap: wrap;
+  }
+
+  .airline {
+    gap: 0.5rem;
+  }
+
+  .line-wrap {
+    display: none;
+  }
+}

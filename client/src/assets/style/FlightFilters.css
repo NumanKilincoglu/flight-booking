@@ -1,0 +1,79 @@
+.flight-filters {
+  border-radius: 8px;
+  padding: 0rem 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+  max-height: 250px;
+  position: relative;
+}
+
+.filter-section h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.flight-sort-dropdown {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.filter-section label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.filter-section input[type="checkbox"] {
+  margin-right: 8px;
+  accent-color: #4c0197;
+  border-radius: 50% !important;
+  width: 16px;
+  height: 16px;
+}
+
+.filter-section-scroll {
+  margin-bottom: 20px;
+  overflow-y: auto;
+  max-height: 250px;
+  position: relative;
+}
+
+.radio-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.radio-label input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #4c0197;
+}
+
+.load-more {
+  width: 100%;
+  background-color: #4c0197;
+  border: none;
+  height: 35px;
+  color: white;
+  cursor: pointer;
+}
+
+.load-more:hover {
+  background-color: #7c1ade
+}
+
+@media screen and (max-width: 976px) {
+  .flight-filters {
+    display: none;
+  }
+}

@@ -1,0 +1,161 @@
+.book-your-flights {
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.search-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trip-type {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  height: 35px;
+}
+
+.trip-type .left,
+.right,
+.show-flight {
+  padding: 0.5rem 1.5rem;
+  background-color: #4c0197;
+  border-radius: 4px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  height: 40px;
+}
+
+.show-flight {
+  width: 200px;
+}
+
+.show-flight:hover {
+  background-color: #7c1ade;
+}
+
+.trip-type .left {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.trip-type .right {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: #e8e0ea;
+  color: #4c0197;
+}
+
+.book-your-flights h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
+  text-align: start;
+}
+
+.title {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.search-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.location-wrap,
+.date-wrap {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  border: none;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  border-color: #4c0197;
+  outline: none;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.4px solid rgb(172, 172, 172);
+  height: 36px;
+  padding-left: 15px;
+  padding-right: 10px;
+}
+
+.input-container img {
+  width: 24px;
+  height: 24px;
+}
+
+.left-radius {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.right-radius {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.location {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.flight-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.date-padding {
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 976px) {
+  .search-wrap {
+    flex-wrap: wrap;
+  }
+
+  .search-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .date-wrap, .location-wrap {
+    flex-wrap: wrap;
+  }
+}

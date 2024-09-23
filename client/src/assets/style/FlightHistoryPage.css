@@ -1,0 +1,41 @@
+.flight-history-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background-color: #f4f4f6;
+  gap: 1rem;
+}
+
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  gap: 2rem;
+}
+
+.flights-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.flight-list {
+  display: flex;
+  flex-direction: column;
+  flex: 4;
+  gap: 4rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 976px) {
+  .main-wrap  {
+    padding: 1rem 0.5rem;
+  }
+}
