@@ -78,7 +78,6 @@ const BookFlight = () => {
 
     const handleShowFlights = async (filter) => {
         setFilters(filter);
-        getAllFligths();
     };
 
     const handleLoadMoreAirlines = () => {
