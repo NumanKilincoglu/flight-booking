@@ -8,7 +8,7 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 
 - **Flight Search**: Search for flights using multiple filters, including departure and arrival locations, dates, airlines, and more.
 - **Flight Booking**: Users can book flights directly through the application.
-- **Booking History**: Users can view their bookings and filter the booking history.
+- **Booking History**: Users able to view their bookings and filter the booking history.
 - **Responsive Design**: The application is designed to be mobile-friendly.
 
 ## Technologies
