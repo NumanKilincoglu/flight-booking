@@ -4,11 +4,12 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: auto;
 }
 
 .filter-section {
   margin-bottom: 20px;
-  max-height: 250px;
+  max-height: auto;
   position: relative;
 }
 

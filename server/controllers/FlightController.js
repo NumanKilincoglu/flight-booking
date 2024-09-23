@@ -34,7 +34,7 @@ export const getDestinations = async (req, res) => {
 
     } catch (err) {
         console.log(err)
-        res.status(400).json({ success: false, error: "Flight not found.", details: err });
+        res.status(400).json({ success: false, error: "Destination not found.", details: err });
     }
 }
 

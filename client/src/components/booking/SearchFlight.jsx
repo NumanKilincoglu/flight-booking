@@ -116,8 +116,10 @@ const SearchFlight = ({ onSearch }) => {
                     key={index}
                     onClick={(e) => handleDestination(dest, e)}
                     className="dropdown-item"
-                  >
-                    {`${dest?.publicName?.english} (${dest?.iata || ''})`}
+                  ><p> {`${dest?.publicName?.english} (${dest?.iata || ''})`}</p>
+                    <p className='country'>
+                      {dest?.city ? `${dest.city}, ${dest.country}` : `${dest?.country || ''}`}
+                    </p>
                   </li>
                 ))}
               </ul>
