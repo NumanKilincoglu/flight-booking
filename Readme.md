@@ -36,7 +36,7 @@ This project is a flight booking application that utilizes the Schiphol Airport 
     npm install
     ```
 
-3. Fill required fiels in the `.env` file:
+3. Fill required fields in the `.env` file:
     ```bash
     APP_ID=your_app_id
     KEY=your_app_key
@@ -50,7 +50,8 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 
 ### Client Installation
 1. Navigate to the `client` directory:
-    ```bash cd client
+    ```bash
+    cd client
     ```
 
 2. Install the required dependencies:
