@@ -10,7 +10,7 @@ import { connectToDatabase } from "./db.js";
 
 dotenv.config();
 const app = express();
-const port = 3003;
+const port = 3002;
 
 app.use(cors({
     origin: ['http://localhost:3000', 'https://flight-booking-app-wa3s.onrender.com'],

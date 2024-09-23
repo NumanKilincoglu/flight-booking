@@ -78,9 +78,11 @@ const FlightHistory = () => {
               <FlightHistoryCard key={index} flight={flight} />
             ))
           }
-          {!loading
-            && newFlights.length === 0
-            && (<p>No flight history available.</p>)}
+          {!loading && newFlights.length === 0 && (
+            <div className="empty">
+              <p className="empty-message">No flight history available.</p>
+            </div>
+          )}
         </div>
         {!loading && <LoadMore onNextPage={nextPage} />}
       </div>

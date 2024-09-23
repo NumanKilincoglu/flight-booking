@@ -40,6 +40,11 @@
   outline: none;
 }
 
+.fare {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .avg-fare {
   font-size: 18px;
   color: #333;

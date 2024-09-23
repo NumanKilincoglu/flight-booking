@@ -27,7 +27,7 @@ const SortSection = ({ avgFare, totalReservations, sortOptions, onSortSelect }) 
                 </div>
             </div>
             <div className="sort-right">
-                <div className='f'>
+                <div className='fare'>
                     <img alt='info' className='flight-icon' src={Info}></img>
                     <span className="avg-fare">Average Fare: ${avgFare}</span>
                 </div>
