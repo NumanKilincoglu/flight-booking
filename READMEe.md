@@ -1,6 +1,6 @@
 # Flight Booking Application
 
-This project is a flight booking application that utilizes the Schiphol Airport API V4. It offers users the ability to search for flights based on various filters and provides flight booking features.
+This project is a flight booking application that utilizes the Schiphol Airport API V4. It allows users to search for flights based on various filters and provides flight booking features.
 
 **Project is Live On the Following URL**: (https://flight-booking-rqbo.onrender.com)
 
@@ -15,7 +15,7 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 ![Booking Flight](https://i.imgur.com/1WH9dIY.jpeg)
 
 
--  Flight history of user.
+-  Flight history of the user.
 
 
 ![Flight History](https://i.imgur.com/HjlS4zi.jpeg)
@@ -24,7 +24,7 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 
 - **Flight Search**: Search for flights using multiple filters, including departure and arrival locations, dates, airlines, and more.
 - **Flight Booking**: Users can book flights directly through the application.
-- **Booking History**: Users able to view their bookings and filter the booking history.
+- **Flight History**: Users can view their bookings and filter the booking history.
 - **Responsive Design**: The application is designed to be mobile-friendly.
 
 ## Technologies
@@ -38,7 +38,7 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 
 ## Project Structure
 
-- **client/**: The front-end of the flight booking application built with React, HTML, CSS.
+- **client/**: The front-end of the flight booking application built with React, HTML, and CSS.
 - **server/**: The back-end application that manages flight information and reservation processes using Node.js and Express.js.
 
 ## Installation
