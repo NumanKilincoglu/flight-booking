@@ -1,15 +1,16 @@
 .book-flight-page {
   display: flex;
   justify-content: space-between;
-  padding-top: 1rem;
+  padding: 1rem 1.4rem;
   height: 100%;
   background-color: inherit;
   padding-bottom: 5rem;
+  gap: 1rem;
 }
 
 .left-section {
   flex: 4;
-  padding: 1rem;
+  padding: 0rem;
   background-color: transparent;
   border-radius: 8px;
   display: flex;
@@ -21,8 +22,8 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
-  padding: 1rem;
 }
 
 .flights-wrap {

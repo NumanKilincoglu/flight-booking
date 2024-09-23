@@ -51,7 +51,6 @@ export const getAllFlights = async (req, res) => {
 
         const totalReservations = await Reservation.countDocuments();
 
-
         if (!flights || flights.length === 0) {
             return res.status(400).json({
                 success: false,

@@ -6,6 +6,7 @@
 
 .sort-label {
   width: 80px;
+  font-size: 20px;
 }
 
 .sort-left {
@@ -23,9 +24,9 @@
 .sort-dropdown {
   background-color: transparent;
   border: none;
-  font-size: 16px;
+  font-size: 20px;
   cursor: pointer;
-  padding: 5px;
+  padding: 0px 5px;
   appearance: none;
   font-weight: bold;
   width: auto;

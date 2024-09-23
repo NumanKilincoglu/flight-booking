@@ -35,7 +35,7 @@ const Navbar = () => {
                         alt="User Avatar"
                         className="user-avatar"
                     />
-                    <span className="user-name">Joane Smith</span>
+                    <span className="user-name">User</span>
                 </div>
             </div>
         </nav>

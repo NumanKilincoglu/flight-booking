@@ -25,13 +25,17 @@ const FlightSortOptions = [
 ];
 
 const FlightArrivalTimes = [
+    { value: '00:00', label: '12:00 AM - 02:00 AM' },
+    { value: '02:00', label: '2:00 AM - 05:00 AM' },
     { value: '05:00', label: '5:00 AM - 6:00 AM' },
     { value: '07:00', label: '7:00 AM - 8:00 AM' },
+    { value: '08:00', label: '8:00 AM - 10:00 AM' },
     { value: '12:00', label: '12:00 PM - 3:00 PM' },
     { value: '14:00', label: '02:00 PM - 4:00 PM' },
     { value: '16:00', label: '04:00 PM - 5:00 PM' },
     { value: '18:00', label: '06:00 PM - 7:00 PM' },
-    { value: '20:00', label: '08:00 PM - 10:00 PM' }
+    { value: '20:00', label: '08:00 PM - 10:00 PM' },
+    { value: '22:00', label: '10:00 PM - 12:00 AM' },
 ];
 
 const Cards = [
