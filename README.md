@@ -5,17 +5,17 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 **Project is Live On the Following URL**: (https://flight-booking-rqbo.onrender.com)
 
 ## Project Screenshots
-- Searching flights with advanced filters.
+- #### Searching flights with advanced filters.
 
 ![Search Flights](https://i.imgur.com/Qxni3X6.jpeg)
 
-- Booking the selected flight.
+- #### Booking the selected flight.
 
   
 ![Booking Flight](https://i.imgur.com/1WH9dIY.jpeg)
 
 
--  Flight history of the user.
+- #### Flight history of the user.
 
 
 ![Flight History](https://i.imgur.com/HjlS4zi.jpeg)
@@ -46,7 +46,9 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 ### Server Installation
 
 1. Navigate to the `server` directory:
-
+   ```bash
+    cd server
+    ```
 2. Install the required dependencies:
     ```bash
     npm install
