@@ -2,7 +2,7 @@
 
 This project is a flight booking application that utilizes the Schiphol Airport API V4. It allows users to search for flights based on various filters and provides flight booking features.
 
-**Project is Live On the Following URL**: (https://flight-booking-rqbo.onrender.com)
+**Project is Live On the Following URL**: (https://flight-booking-rqbo.onrender.com
 
 ## Project Screenshots
 - #### Searching flights with advanced filters.
@@ -89,4 +89,7 @@ This project is a flight booking application that utilizes the Schiphol Airport 
     npm start
     ```
 
+## Note
+- **Client Project Repository**: (https://github.com/NumanKilincoglu/flight-booking-app)
+- **Server Project Repository**: (https://github.com/NumanKilincoglu/flight-booking-api)
    
