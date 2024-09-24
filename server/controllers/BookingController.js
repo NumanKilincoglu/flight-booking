@@ -53,15 +53,16 @@ export const getAllFlights = async (req, res) => {
             .limit(limitNum)
             .lean();
 
+        // Toplam rezervasyon sayisini al
+        const totalReservations = await Reservation.countDocuments();
+
         if (!flights || flights.length === 0) {
             return res.status(400).json({
                 success: false,
-                error: "Flight not found."
+                error: "Flight not found.",
+                totalReservations: totalReservations
             });
         }
-
-        // Toplam rezervasyon sayisini al
-        const totalReservations = await Reservation.countDocuments();
 
         // Eger airlines.json dosyasi varsa, ucuslara havayolu adlarini ekle
         if (fs.existsSync('airlines.json')) {

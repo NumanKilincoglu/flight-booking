@@ -52,11 +52,11 @@ export const bookFlight = async (req) => {
 export const getFlights = async (req) => {
     try {
         const response = await apiInstance.get('booking/all', { params: req.params });
-        if (!response.data.success || !response?.data?.flights) return []
+        if (!response.data.success || !response?.data) return response?.data
         return response.data;
     } catch (error) {
         console.log(error?.response?.data?.error);
-        return []
+        return error.response?.data
     }
 };
 

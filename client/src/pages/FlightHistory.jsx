@@ -24,7 +24,10 @@ const FlightHistory = () => {
         setLoading(true);
         const flightData = await FlightService.getFlights({
           params: {
-            sortBy: filters.sortBy, order: filters.order, page: filters.page, limit: filters.limit
+            sortBy: filters.sortBy, 
+            order: filters.order, 
+            page: filters.page, 
+            limit: filters.limit
           }
         });
 
@@ -71,7 +74,10 @@ const FlightHistory = () => {
   // Sayfalama mantigi
   const nextPage = () => {
     const previousPage = filters.page;
-    setFilters({ page: previousPage + 1 })
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      page: previousPage + 1
+    }));
   };
 
   return (
