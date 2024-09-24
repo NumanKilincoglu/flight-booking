@@ -41,7 +41,7 @@ const FlightFilters = ({ sortOptions, arrivalTimes, stopsOptions, airlines, airl
                 {arrivalTimes.map(time => (
                     <label key={time.value} className="radio-label" onChange={handleTimeChange}>
                         <input type="radio" name="arrival-time" value={time.value} />
-                        {time.label}
+                        <p>{time.label}</p>
                     </label>
                 ))}
             </div>
@@ -50,7 +50,10 @@ const FlightFilters = ({ sortOptions, arrivalTimes, stopsOptions, airlines, airl
                 {stopsOptions.map(stop => (
                     <label key={stop.value} className="radio-label">
                         <input type="radio" name="stops" value={stop.value} />
-                        {stop.label}
+                        <div className='radio-content'>
+                            <p>{stop.label}</p>
+                            <p>{stop.price}</p>
+                        </div>
                     </label>
                 ))}
             </div>
@@ -66,7 +69,10 @@ const FlightFilters = ({ sortOptions, arrivalTimes, stopsOptions, airlines, airl
                                     value={airline.iata}
                                     onChange={handleAirlineChange}
                                 />
-                                {airline.publicName}
+                                <div className='radio-content'>
+                                    <p>{airline.publicName}</p>
+                                    <p>${airline.price}</p>
+                                </div>
                             </label>
                         ))
                     ) : (

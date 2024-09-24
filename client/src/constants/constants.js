@@ -14,9 +14,9 @@ const HistorySortOptions = [
 ];
 
 const StopsOptions = [
-    { value: 'nonstop', label: 'Nonstop' },
-    { value: '1-stop', label: '1 Stop' },
-    { value: '2-stops', label: '2 Stops' }
+    { value: 'nonstop', label: 'Nonstop', price: '220$' },
+    { value: '1-stop', label: '1 Stop', price: '210$' },
+    { value: '2-stops', label: '2 Stops', price: '200$' }
 ];
 
 const FlightSortOptions = [

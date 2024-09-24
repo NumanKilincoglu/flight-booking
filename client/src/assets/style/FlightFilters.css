@@ -1,6 +1,6 @@
 .flight-filters {
   border-radius: 8px;
-  padding: 0rem 1rem;
+  padding-left: 1rem;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -53,6 +53,17 @@
   margin-bottom: 8px;
   font-size: 14px;
   font-weight: bold;
+  padding-right: 0.4rem;
+}
+
+.radio-label p {
+  font-size: 13px;
+}
+
+.radio-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .radio-label input[type="radio"] {

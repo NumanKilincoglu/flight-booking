@@ -62,6 +62,11 @@ export const getAirlines = async (req, res) => {
         const startIndex = (parsedPage - 1) * parsedLimit;
         const paginatedAirlines = sortedAirlines.slice(startIndex, startIndex + parsedLimit);
 
+        const paginatedAirlinesWithPrice = paginatedAirlines.map(airline => ({
+            ...airline,
+            price: Math.floor(Math.random() * (230 - 100 + 1)) + 100
+        }));
+
         if (paginatedAirlines.length === 0) {
             return res.status(200).send({
                 success: true,
@@ -72,7 +77,7 @@ export const getAirlines = async (req, res) => {
 
         return res.status(200).send({
             success: true,
-            airlines: paginatedAirlines,
+            airlines: paginatedAirlinesWithPrice,
             currentPage: parsedPage,
             totalPages: Math.ceil(validAirlines.length / parsedLimit),
             totalAirlines: validAirlines.length
