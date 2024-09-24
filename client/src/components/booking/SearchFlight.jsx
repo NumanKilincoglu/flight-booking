@@ -7,18 +7,19 @@ import Arrival from '../../assets/images/arrivals.png';
 
 const SearchFlight = ({ onSearch }) => {
   const [filter, setFilter] = useState({
-    from: 'AMS',
-    to: '',
-    depart: '',
-    arrival: '',
-    iataCode: '',
-    page: 0
+    from: 'AMS', // Kalkis noktasi (varsayilan olarak 'AMS')
+    to: '', // Varis noktasi
+    depart: '', // Kalkis tarihi
+    arrival: '', // Varis tarihi
+    iataCode: '', // IATA kodu
+    page: 0 // Sayfa numarasi
   });
 
-  const [destinations, setDestinations] = useState([]);
-  const [showToDropdown, setShowToDropdown] = useState(false);
-  const previousToValue = useRef(filter.to);
+  const [destinations, setDestinations] = useState([]); // Varis noktasi onerilerini saklar
+  const [showToDropdown, setShowToDropdown] = useState(false); // Varis noktasi dropdown'u toggle
+  const previousToValue = useRef(filter.to); // Onceki 'to' degerini saklamak icin ref
 
+  // 'to' degeri degistiginde varis noktasi onerilerini getiren hook
   useEffect(() => {
     const fetchDestinations = debounce(async () => {
       if (filter.to && filter.to !== previousToValue.current) {
@@ -48,6 +49,7 @@ const SearchFlight = ({ onSearch }) => {
     setShowToDropdown(false);
   }, []);
 
+  // Secilen varis noktasini isleyen fonksiyon
   const handleDestination = (selectedDestination, event) => {
     if (filter.to !== selectedDestination.iata) {
       setFilter(prev => ({ ...prev, to: selectedDestination.iata, iataCode: selectedDestination.iata }));
@@ -56,6 +58,7 @@ const SearchFlight = ({ onSearch }) => {
     }
   };
 
+  // Debounce fonksiyonu (fazla request atilmasini engeller)
   const debounce = (func, delay) => {
     let timeout;
     return (...args) => {

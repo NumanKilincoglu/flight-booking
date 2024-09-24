@@ -1,6 +1,9 @@
 import animation from '../../assets/images/loading.json';
 import Lottie from 'react-lottie';
 
+/* Loading komponenti*/
+/* Burada loading animation icin Lottie kullanildi */
+
 const LoadingScreen = () => {
     const defaultOptions = {
         loop: true,

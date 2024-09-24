@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../assets/style/HistoryFilters.css';
 
+/* Ucuslarim kismindaki filtre bolumu */
+
 const FilterSection = () => {
     const starOptions = [2, 3, 4, 5, 6];
 

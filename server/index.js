@@ -12,6 +12,7 @@ dotenv.config();
 const app = express();
 const port = 3002;
 
+// Cors konfigurasyonu
 app.use(cors({
     origin: ['http://localhost:3000', 'https://flight-booking-rqbo.onrender.com'],
     methods: ['GET', 'POST', 'PUT', 'DELETE'],

@@ -2,6 +2,8 @@ import '../../assets/style/SortSection.css';
 import React from 'react';
 import Info from '../../assets/images/info.png';
 
+/* Ucuslarim sayfasinda bulunan siralama filtreleri ve averaj bilet ucreti komponenti */
+
 const SortSection = ({ avgFare, totalReservations, sortOptions, onSortSelect }) => {
 
     const handleShowFlights = (event) => {

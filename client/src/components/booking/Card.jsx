@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../assets/style/Card.css';
 
+// Anasayfanin saginda bulunan reklam karti komponenti
 const Card = ({ imgSrc, title }) => {
     return (
         <div className="card" style={{ backgroundImage: `url(${imgSrc})` }}>

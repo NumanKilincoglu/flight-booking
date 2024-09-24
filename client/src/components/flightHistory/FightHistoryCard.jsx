@@ -24,6 +24,8 @@ const FlightHistoryCard = ({ flight }) => {
         aircraftType,
     } = flight;
 
+    /* Ilgili bilgiler kullaniciya gosterilmek uzere duzenlenir */
+
     const [arrivalCode] = destinations;
 
     const flightDuration = calculateDuration(estimatedLandingTime || estimatedLandingTime || actualLandingTime || expectedTimeBoarding || actualOffBlockTime, scheduleDateTime);

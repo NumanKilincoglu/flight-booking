@@ -1,3 +1,5 @@
+/* Reservation semasi */
+
 import mongoose, { Schema } from "mongoose";
 
 const ReservationSchema = new Schema({

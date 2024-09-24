@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../assets/style/FlightFilters.css';
 
+/* Ucus filtreleri bolumu */
+
 const FlightFilters = ({ sortOptions, arrivalTimes, stopsOptions, airlines, airlineLoadMore, onAirlineSelect, onSortSelect, onTimeSelect }) => {
 
     const handleLoadMoreAirlines = () => {

@@ -1,5 +1,6 @@
 import apiInstance from './ApiService.js';
 
+// Ucus aramalarini yapar
 export const searchFlights = async (req) => {
     try {
         const response = await apiInstance.get('flights/search', { params: req.params });
@@ -11,6 +12,7 @@ export const searchFlights = async (req) => {
     }
 };
 
+// Kullanicin varis noktasi icin oneriler getirir
 export const getDestinations = async (req) => {
     try {
         const response = await apiInstance.get('flights/destinations', { params: { search: req.search } });
@@ -22,6 +24,7 @@ export const getDestinations = async (req) => {
     }
 };
 
+// Havayollari filtresi icin ilgili verileri getirir
 export const getAirlines = async (req) => {
     try {
         const response = await apiInstance.get('flights/airlines', { params: { page: req.page, limit: req.limit } });
@@ -33,6 +36,7 @@ export const getAirlines = async (req) => {
     }
 };
 
+// Ucus reservasyonu yapar
 export const bookFlight = async (req) => {
     try {
         const response = await apiInstance.post('booking/book', req.data);
@@ -44,6 +48,7 @@ export const bookFlight = async (req) => {
     }
 };
 
+// Reservasyonlari getirir
 export const getFlights = async (req) => {
     try {
         const response = await apiInstance.get('booking/all', { params: req.params });
@@ -55,6 +60,7 @@ export const getFlights = async (req) => {
     }
 };
 
+// Ortalama bilet fiyatini getirir
 export const getAverageFarePrice = async () => {
     try {
         const response = await apiInstance.get('booking/average');

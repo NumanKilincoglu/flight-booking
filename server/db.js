@@ -2,6 +2,7 @@ import mongoose from "mongoose";
 import dotenv from 'dotenv';
 dotenv.config();
 
+// MongoDB baglanti islemlerini yapar
 async function connectToDatabase() {
     const uri = process.env.MONGO_URL;
     try {

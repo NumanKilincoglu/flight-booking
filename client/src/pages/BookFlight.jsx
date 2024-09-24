@@ -8,7 +8,9 @@ import FlightFilters from '../components/booking/FlightFilters';
 
 import LoadMore from '../components/flightHistory/LoadMore';
 import FlightService from '../services/FlightService';
-import { StopsOptions, FlightSortOptions, FlightArrivalTimes, Cards } from '../constants/constants.js'
+import { StopsOptions, FlightSortOptions, FlightArrivalTimes, Cards } from '../constants/constants.js';
+
+/* Ana Sayfa */
 
 const BookFlight = () => {
     const [newFlights, setFlights] = useState([]);
@@ -26,6 +28,7 @@ const BookFlight = () => {
         page: 0
     });
 
+    // Ucuslari filtreleyerek arar
     const getAllFligths = useCallback(async () => {
         try {
             setLoading(true);
@@ -41,9 +44,11 @@ const BookFlight = () => {
                     flightTime: filters.flightTime
                 }
             });
+            // Ucuslari filtreleyerek arar
             if (filters.page === 0) {
                 setFlights(flightData);
             } else {
+                // Eğer sayfa 0 degilse, onceki ucuslari koruyarak yeni ucuslari ekle
                 setFlights((prevFlights) => [...prevFlights, ...flightData]);
             }
         } catch (error) {
@@ -53,12 +58,14 @@ const BookFlight = () => {
         }
     }, [filters]);
 
+    // Filtreler degistiginde ucuslari tekrar getirir
     useEffect(() => {
         if (filters) {
             getAllFligths();
         }
     }, [filters, getAllFligths]);
 
+    // Havayolu filtrelerini getirir (gerekirse)
     useEffect(() => {
         const fetchAirlines = async () => {
             try {
@@ -67,6 +74,7 @@ const BookFlight = () => {
                     page: page,
                     limit: 10,
                 });
+                // Havayollarini onceki listeye ekleyerek gunceller
                 setAirLines((prev) => [...prev, ...airlineData]);
             } catch (error) {
                 console.error('Error fetching airlines:', error);
@@ -80,10 +88,12 @@ const BookFlight = () => {
         setFilters(filter);
     };
 
+    // Havayolu filtresinin sayfalama mantigi
     const handleLoadMoreAirlines = () => {
         setPage((prev) => prev + 1);
     };
 
+    // Secilen havayolu koduna gore filtreleri gunceller
     const handleAirlineSelect = (airlineCode) => {
         setFilters((prevFilters) => ({
             ...prevFilters,
@@ -91,6 +101,7 @@ const BookFlight = () => {
         }));
     };
 
+    // Sıralama filtresi mantigi
     const handleSort = (sortCode) => {
         setFilters((prevFilters) => ({
             ...prevFilters,
@@ -98,6 +109,7 @@ const BookFlight = () => {
         }));
     };
 
+    // Ucus saati filtresi mantigi
     const handleFlightTime = (time) => {
         setFilters((prevFilters) => ({
             ...prevFilters,
@@ -105,6 +117,7 @@ const BookFlight = () => {
         }));
     };
 
+    //Uculari sayfalama mantigi
     const nextPage = () => {
         const previousPage = filters.page;
         setFilters({ page: previousPage + 1 })

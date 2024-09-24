@@ -2,6 +2,8 @@ import Rental from '../assets/images/car.jpg'
 import Hotel from '../assets/images/hotel.jpg'
 import Travel from '../assets/images/travel.jpg';
 
+//Uygulama  uzerinde kullanilan cesitli filtre degerleri burada tanımlanmistir
+
 const HistorySortOptions = [
     { value: 'farePrice', label: 'Lowest Price', order: 'ASC' },
     { value: 'farePrice', label: 'Highest Price', order: 'DESC' },

@@ -1,6 +1,8 @@
 import React from 'react';
 import '../../assets/style/HandleMore.css';
 
+/* Pagination komponenti */
+
 const LoadMore = ({ onNextPage }) => {
 
     const handleLoadMore = () => {

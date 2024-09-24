@@ -8,6 +8,8 @@ import Plane from '../../assets/images/plane.png';
 import FlightService from '../../services/FlightService';
 import { calculateDuration, formatDate, formatDateGeneral } from '../../utils/util.js';
 
+/* Ucus kaydi komponenti */
+
 const FlightRecord = ({ flight }) => {
     const [detailsVisible, setDetailsVisible] = useState(false);
 
@@ -31,6 +33,8 @@ const FlightRecord = ({ flight }) => {
         tripType,
     } = flight;
 
+
+    /* Ilgili tarih bilgiler kullaniciya gosterilmek uzere duzenlenir */
     const flightDuration = calculateDuration(estimatedLandingTime || expectedTimeBoarding || actualOffBlockTime, scheduleDateTime);
 
     const boardingTime = expectedTimeBoarding
@@ -48,6 +52,7 @@ const FlightRecord = ({ flight }) => {
     const operatingTime = formatDateGeneral(scheduleDateTime);
     const estimatedLanding = formatDate(estimatedLandingTime || actualLandingTime) || 'TBA';
 
+    // Rota uzerindeki durak sayisini hesaplar ve dondurur
     const getStopCount = () => {
         if (!destinations || destinations.length === 0) {
             return 'No stops';
@@ -57,14 +62,18 @@ const FlightRecord = ({ flight }) => {
             : `${destinations.length} Stops`;
     };
 
+    // Ucus rezervasyonu yapar
     const bookFlight = async () => {
 
         try {
 
             const response = await FlightService.bookFlight({ data: flight });
+            //Eger basarisiz ise ilgili uyariyi gosterir
             if (!response.success) return toast.error(response.error);
+            //Eger basarili ise ilgili bilgilendirmeyi yapar
             toast.success('Flight booked successfully!');
         } catch (error) {
+            //Eger basarisiz ise ilgili uyariyi gosterir
             return toast.error('An error occurred.');
         }
 

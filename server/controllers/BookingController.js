@@ -1,11 +1,14 @@
 import Reservation from '../models/ReservationModel.js';
 import fs from 'fs';
 
+// Ucus rezervasyonu olusturur
 export const bookFlight = async (req, res) => {
     try {
+        // Eger istek body'si bos ise hata dondur
         if (!req.body)
             return res.status(400).send({ success: false, error: 'Body is empty.' });
 
+        // Eger ucus zamani gecmiste ise hata dondur
         if (new Date(req?.body?.scheduleDateTime) < new Date())
             return res.status(400).send({ success: false, error: 'Cannot book a flight that has already departed.' });
 
@@ -19,13 +22,15 @@ export const bookFlight = async (req, res) => {
             .status(400)
             .send({
                 success: false,
-                error: 'Already booked the flight. Plase, check the My Flights page.',
+                error: 'Already booked the flight. Plase, check the My Flights page.', // Hata mesaji
                 id: req.body.id
             });
     }
 };
 
+// Tum ucuslari getiren fonksiyon
 export const getAllFlights = async (req, res) => {
+
     try {
 
         const {
@@ -35,12 +40,11 @@ export const getAllFlights = async (req, res) => {
             order = 'DESC'
         } = req.query;
 
-        const sortObject = {};
-        sortObject[sortBy] = order.toLowerCase();
-
         const pageNum = parseInt(page);
         const limitNum = parseInt(limit);
         const skip = (pageNum - 1) * limitNum;
+        const sortObject = {};
+        sortObject[sortBy] = order.toLowerCase();
 
         let flights = await Reservation
             .find({})
@@ -49,8 +53,6 @@ export const getAllFlights = async (req, res) => {
             .limit(limitNum)
             .lean();
 
-        const totalReservations = await Reservation.countDocuments();
-
         if (!flights || flights.length === 0) {
             return res.status(400).json({
                 success: false,
@@ -58,6 +60,10 @@ export const getAllFlights = async (req, res) => {
             });
         }
 
+        // Toplam rezervasyon sayisini al
+        const totalReservations = await Reservation.countDocuments();
+
+        // Eger airlines.json dosyasi varsa, ucuslara havayolu adlarini ekle
         if (fs.existsSync('airlines.json')) {
             const fileData = fs.readFileSync('airlines.json', 'utf-8');
             const airlines = JSON.parse(fileData);
@@ -85,8 +91,11 @@ export const getAllFlights = async (req, res) => {
     }
 };
 
+// Ortalama ucus fiyatini hesaplar
 export const getAverageFarePrice = async (req, res) => {
+
     try {
+
         const flights = await Reservation.aggregate([
             {
                 $group: {
