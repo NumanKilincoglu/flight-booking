@@ -110,7 +110,7 @@ export const getAllFlights = async (req, res) => {
         if (arrival) params.toScheduleDate = arrival;
         if (flightTime) params.scheduleTime = flightTime;
         if (airlineCode) params.airline = airlineCode;
-
+        
         const response = await axios.get(baseURL, {
             headers: {
                 'Accept': 'application/json',
@@ -174,7 +174,7 @@ export const getAllFlights = async (req, res) => {
 
         res.status(201).send({ success: true, flights: newFlights });
     } catch (err) {
-        console.log(err.response);
+        console.log(err.response.data.status);
         res.status(400).json({ success: false, error: "Uçuş bulunamadı.", details: err?.details?.message });
     }
 }

@@ -44,7 +44,7 @@
 .filter-section-scroll {
   margin-bottom: 20px;
   overflow-y: auto;
-  max-height: 250px;
+  max-height: 220px;
   position: relative;
 }
 

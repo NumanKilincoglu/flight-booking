@@ -7,7 +7,15 @@ This project is a flight booking application that utilizes the Schiphol Airport 
 ## Project Screenshots
 - #### Searching flights with advanced filters.
 
-![Search Flights](https://i.imgur.com/Qxni3X6.jpeg)
+
+![Search Flights](https://i.imgur.com/lhZcRv6.jpeg)
+
+
+- #### Flight details.
+
+
+![Search Flights](https://i.imgur.com/5AMBtUs.jpeg)
+
 
 - #### Booking the selected flight.
 

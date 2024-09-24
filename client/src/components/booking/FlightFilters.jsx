@@ -38,12 +38,15 @@ const FlightFilters = ({ sortOptions, arrivalTimes, stopsOptions, airlines, airl
             </div>
             <div className="filter-section">
                 <h4>Arrival Times</h4>
-                {arrivalTimes.map(time => (
-                    <label key={time.value} className="radio-label" onChange={handleTimeChange}>
-                        <input type="radio" name="arrival-time" value={time.value} />
-                        <p>{time.label}</p>
-                    </label>
-                ))}
+                <div className='filter-section-scroll'>
+                    {arrivalTimes.map(time => (
+                        <label key={time.value} className="radio-label" onChange={handleTimeChange}>
+                            <input type="radio" name="arrival-time" value={time.value} />
+                            <p>{time.label}</p>
+                        </label>
+                    ))}
+                </div>
+
             </div>
             <div className="filter-section">
                 <h4>Stops</h4>
