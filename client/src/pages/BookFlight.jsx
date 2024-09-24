@@ -44,10 +44,15 @@ const BookFlight = () => {
                     flightTime: filters.flightTime
                 }
             });
+
             // Ucuslari filtreleyerek arar
             if (filters.page === 0) {
                 setFlights(flightData);
-            } else {
+            }
+            else if (filters.page > 0 && flightData.length == 0) {
+                setFlights((prevFlights) => [...prevFlights, ...flightData]);
+            }
+            else {
                 // Eğer sayfa 0 degilse, onceki ucuslari koruyarak yeni ucuslari ekle
                 setFlights((prevFlights) => [...prevFlights, ...flightData]);
             }
@@ -120,7 +125,10 @@ const BookFlight = () => {
     //Uculari sayfalama mantigi
     const nextPage = () => {
         const previousPage = filters.page;
-        setFilters({ page: previousPage + 1 })
+        setFilters((prevFilters) => ({
+            ...prevFilters,
+            page: previousPage + 1
+        }));
     };
 
     return (
